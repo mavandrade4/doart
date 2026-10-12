@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* ==================== DESIGN TOKENS ==================== */
+:root {
+  /* Colour */
+  --ink: #000000;
+  --paper: #ffffff;
+  --muted: #8c8c8c;
+  --placeholder: #ececec;
+
+  /* Type */
+  --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+  --font-text: 'Newsreader', Georgia, 'Times New Roman', serif;
+
+  /* Fluid type scale (tuned against the 1611px-wide Figma frame) */
+  --fs-brand-small: clamp(1.75rem, 3.1vw, 3.1rem);
+  --fs-brand-large: clamp(3.25rem, 6vw, 6.1rem);
+  --fs-nav: clamp(1.25rem, 2.4vw, 2.4rem);
+  --fs-section-title: clamp(2.25rem, 3.6vw, 3.6rem);
+  --fs-filter: clamp(1.05rem, 1.7vw, 1.75rem);
+  --fs-marquee: clamp(1rem, 1.6vw, 1.6rem);
+  --fs-about: clamp(1rem, 1.05vw, 1.1rem);
+  --fs-review: clamp(1.1rem, 1.8vw, 1.85rem);
+
+  /* Layout */
+  --content-width: 1290px;
+  --gutter: clamp(1rem, 5vw, 6rem);
+  --gutter-wide: clamp(0.5rem, 2.4vw, 2.4rem);
+  --nav-height: clamp(3.5rem, 6vw, 5.5rem);
+  --grid-gap: clamp(0.75rem, 2.5vw, 2.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+}
